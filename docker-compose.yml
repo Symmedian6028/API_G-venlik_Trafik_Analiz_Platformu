@@ -1,0 +1,22 @@
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: api_security_backend
+    ports:
+      - "5253:5253"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    restart: always
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: api_security_frontend
+    ports:
+      - "5173:80"
+    depends_on:
+      - backend
+    restart: always

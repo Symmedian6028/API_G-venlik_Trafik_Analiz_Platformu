@@ -1,0 +1,14 @@
+# .NET / C#
+bin/
+obj/
+.vs/
+*.user
+
+# Frontend / Node
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+
+# System / IDE
+.DS_Store
+Thumbs.db

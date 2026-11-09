@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:15
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: Semih_124568937 # DİKKAT: Buraya kendi belirleyeceğin bir şifre yaz
+      POSTGRES_DB: SecurityPlatformDb
+    ports:
+      - "5432:5432"
